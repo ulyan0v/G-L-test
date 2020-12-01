@@ -14,4 +14,10 @@
     border-radius: 4px;
     background-color: white;
   }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
