@@ -49,8 +49,11 @@ class ProductList extends React.Component {
         >
           <AddProductForm addProduct={this.addProduct}/>
         </ModalWindow>
-        <button onClick={this.showProductForm}>
-          &#10010;
+        <button
+          className="product-list-button primary-button"
+          onClick={this.showProductForm}
+        >
+          Добавить товар
         </button>
         {products.map((product) => (
           <Product

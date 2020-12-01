@@ -42,7 +42,10 @@ export class Product extends React.Component {
           />
         </div>
         <div>
-          <button onClick={this.handleRemove}>
+          <button
+            className="button"
+            onClick={this.handleRemove}
+          >
             &times;
           </button>
         </div>
