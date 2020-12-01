@@ -10,7 +10,7 @@
   background-color: rgba($color: #000000, $alpha: 0.3);
 
   &-dialog {
-    padding: 16px;
+    border: 1px solid gray;
     border-radius: 4px;
     background-color: white;
   }
@@ -19,5 +19,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 16px;
+
+    &-button {
+      font-size: 25px;
+      line-height: 25px;
+      background-color: inherit;
+      border: 1px solid #007bff;
+      border-radius: 3px;
+      color: #007bff;
+      transition: all .2s ease;
+
+      &:hover {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+
+    &-title {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &-body {
+    padding: 16px;
   }
 }

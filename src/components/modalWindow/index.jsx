@@ -13,10 +13,18 @@ export class ModalWindow extends React.Component {
       <div className="modal-window">
         <div className="modal-window-dialog">
           <div className="modal-window-header">
-            <h3>{title}</h3>
-            <button onClick={onClose}>&times;</button>
+            <h3 className="modal-window-header-title">
+              {title}
+            </h3>
+            <button
+              className="modal-window-header-button"
+              onClick={onClose}>
+              &times;
+            </button>
           </div>
-          {children}
+          <div className="modal-window-body">
+            {children}
+          </div>
         </div>
       </div>
     );
