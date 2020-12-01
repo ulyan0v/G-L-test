@@ -18,9 +18,22 @@ export class AddProductForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    const { formFields } = this.state;
+
     this.props.addProduct({
       id: Date.now() % 100000,
-      ...this.state.formFields,
+      ...formFields,
+      price: +formFields.price,
+    });
+
+    this.setState({
+      formFields: {
+        formFields: {
+          title: "",
+          description: "",
+          price: "",
+        }
+      }
     });
   }
 
@@ -35,7 +48,7 @@ export class AddProductForm extends React.Component {
   }
 
   render() {
-    const { title, description, price } = this.state.formFields;
+    const {title, description, price} = this.state.formFields;
 
     return (
       <form onSubmit={this.handleSubmit} className="product-form">
