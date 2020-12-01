@@ -2,6 +2,18 @@ import React from "react";
 import "./product.scss";
 
 export class Product extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleRemove = this.handleRemove.bind(this);
+  }
+
+  handleRemove() {
+    const { remove, product } = this.props;
+
+    remove(product.id);
+  }
+
   render() {
     const { product } = this.props;
     const price = product.price.toLocaleString("ru", {
@@ -28,6 +40,11 @@ export class Product extends React.Component {
             src="https://s1.ticketm.net/dam/a/3ea/a7473588-64b1-4fac-ad26-596f70b993ea_647801_TABLET_LANDSCAPE_LARGE_16_9.jpg"
             alt=""
           />
+        </div>
+        <div>
+          <button onClick={this.handleRemove}>
+            &times;
+          </button>
         </div>
       </div>
     );
