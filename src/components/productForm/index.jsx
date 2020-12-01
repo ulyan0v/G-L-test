@@ -73,7 +73,9 @@ export class AddProductForm extends React.Component {
           type="number"
           name="price"
         />
-        <button>Добавить</button>
+        <button className="product-form-button primary-button">
+          Добавить
+        </button>
       </form>
     );
   }
@@ -87,6 +89,7 @@ class Field extends React.Component {
       <label className="product-form-label">
         {title}
         <input
+          className="product-form-input"
           value={value}
           onChange={onChange}
           type={type}

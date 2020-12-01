@@ -3,5 +3,24 @@
   &-label {
     display: flex;
     flex-direction: column;
+    margin: 10px 0;
+  }
+
+  &-input {
+    margin-top: 3px;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+
+    &:focus {
+      outline: 0;
+      border: 1px solid #007bff;
+    }
+  }
+
+  &-button {
+    font-size: 20px;
+    padding: 5px;
   }
 }
